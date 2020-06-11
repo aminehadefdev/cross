@@ -5,7 +5,7 @@ function cross(int){
         var pos1 = 0
         var pos2 = leng - 1
         var iteration = 0
-        for (let i = 0; i < leng;) {
+        for(let i = 0; i < leng;) {
             if(pos1 == i){
                 str += "\\"
             }
@@ -13,7 +13,7 @@ function cross(int){
             if(pos2 == i){
                 str += "/"
             }
-    
+            
             if(pos1 != i && pos2 != i){
                 str += " "
             }
@@ -35,4 +35,47 @@ function cross(int){
     }
 }
 
-cross(4)
+function square(int){
+    var str = ""
+    var j = 0
+    var iteration = 0
+    for (let i = 0 ; i < int;) {
+        if(i == 0 || i + 1 == int){
+            if(iteration == 0 || iteration == int - 1){
+                str += "+"
+            }else{
+                str += "|"
+            }
+            i++
+        }else{
+            if(iteration == 0 || iteration == int - 1){
+                str += "-"
+            }else{
+                str += " "
+            }
+            i++
+        }
+        if(i == int &&  j <= int - 2){
+            str += "\n"
+            i = 0
+            j++
+            iteration++
+        }
+    }
+    console.log(str)
+}
+
+/*
++--------+
+|\      /|
+| \    / |
+|  \  /  |
+|   \/   |
+|   /\   |
+|  /  \  |
+| /    \ |
+|/      \|
++--------+
+*/
+
+console.log(" +--------+\n","|\\      /|\n", "| \\    / |\n", "|  \\  /  |\n", "|   \\/   |\n", "|   /\\   |\n", "|  /  \\  |\n", "| /    \\ |\n", "|/      \\|\n", "+--------+\n")
