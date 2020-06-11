@@ -65,17 +65,40 @@ function square(int){
     console.log(str)
 }
 
-/*
-+--------+
-|\      /|
-| \    / |
-|  \  /  |
-|   \/   |
-|   /\   |
-|  /  \  |
-| /    \ |
-|/      \|
-+--------+
-*/
+function extemity(int){
+    var str = ''
+    for (let i = 0; i < int; i++) {
+        if(i == 0){
+            str += "+"
+        }else if(i + 1 == int){
+            str += "+"
+        }else{
+            str += "-"
+        }
+    }
+    console.log(str)
+}
 
-console.log(" +--------+\n","|\\      /|\n", "| \\    / |\n", "|  \\  /  |\n", "|   \\/   |\n", "|   /\\   |\n", "|  /  \\  |\n", "| /    \\ |\n", "|/      \\|\n", "+--------+\n")
+function midll(int){
+    var str = ""
+
+    for (let i = 0; i < int; i++) {
+        if(i == 0){
+            str += "|"
+        }else if(i + 1 == int){
+            str += "|"
+        }else{
+            str += " "
+        }
+    }
+
+    console.log(str)
+}
+function square2(x, y){
+    extemity(x)
+    for (let i = 0; i < y; i++) {
+        midll(x)
+    }
+    extemity(x)
+}
+square2(50, 10)
