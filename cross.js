@@ -91,14 +91,15 @@ function midll(int){
             str += " "
         }
     }
-
     console.log(str)
 }
 function square2(x, y){
     extemity(x)
-    for (let i = 0; i < y; i++) {
+    for (let i = 0; i < y; i++){
         midll(x)
     }
     extemity(x)
 }
-square2(50, 10)
+square2(25,10)
+
+//cross(10)
